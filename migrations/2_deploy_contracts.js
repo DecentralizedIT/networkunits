@@ -69,7 +69,7 @@ module.exports = function(deployer, network, accounts) {
   var volumeMultipliers = [{
     rate: 4000,
     lockupPeriod: 0,
-    threshold: web3.utils.toWei(0, 'ether')
+    threshold: web3.utils.toWei(10, 'finney')
   }, {
     rate: 5000,
     lockupPeriod: 5000,
@@ -103,7 +103,7 @@ module.exports = function(deployer, network, accounts) {
   }]
 
   if (network == "test" || network == "develop" || network == "development") {
-    start = new Date("October 28, 2017 13:00:00 GMT+0000").getUnixTime()
+    start = new Date("November 8, 2017 13:00:00 GMT+0000").getUnixTime()
     stakeholders = [{
       account: accounts[0], // Beneficiary 
       tokens: 0,
@@ -115,7 +115,7 @@ module.exports = function(deployer, network, accounts) {
       tokens: 1000,
       eth: 0,
       overwriteReleaseDate: true,
-      fixedReleaseDate: new Date("October 28, 2018 13:00:00 GMT+0000").getUnixTime()
+      fixedReleaseDate: new Date("November 8, 2018 13:00:00 GMT+0000").getUnixTime()
     }, {
       account: accounts[4], // Decentralized
       tokens: 1000,
@@ -148,9 +148,9 @@ module.exports = function(deployer, network, accounts) {
       fixedReleaseDate: 0
     }]
   } else if(network == "main") {
-    start = new Date("October 28, 2017 13:00:00 GMT+0000").getUnixTime()
+    start = new Date("November 8, 2017 13:00:00 GMT+0000").getUnixTime()
     stakeholders = [{
-      account: 'MULTISIG', // Beneficiary 
+      account: '0x3cAf983aCCccc2551195e0809B7824DA6FDe4EC8', // Beneficiary 
       tokens: 0,
       eth: 7500,
       overwriteReleaseDate: false,
@@ -160,7 +160,7 @@ module.exports = function(deployer, network, accounts) {
       tokens: 1000,
       eth: 0,
       overwriteReleaseDate: true,
-      fixedReleaseDate: new Date("October 28, 2018 13:00:00 GMT+0000").getUnixTime()
+      fixedReleaseDate: new Date("November 8, 2018 13:00:00 GMT+0000").getUnixTime()
     }, {
       account: '0xC2264F8cD959266CfcAa13124876E4654081e1Ea', // Decentralized
       tokens: 1000,
