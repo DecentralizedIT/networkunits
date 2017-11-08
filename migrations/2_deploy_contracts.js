@@ -30,7 +30,7 @@ module.exports = function(deployer, network, accounts) {
   
   var phases = [{
     period: 'Presale',
-    duration: 15 * time.days,
+    duration: 45 * time.days,
     rate: 500,
     lockupPeriod: 30 * time.days,
     usesVolumeMultiplier: true
@@ -67,23 +67,23 @@ module.exports = function(deployer, network, accounts) {
   }]
 
   var volumeMultipliers = [{
-    rate: 4000,
+    rate: 3500, // 1:675
     lockupPeriod: 0,
     threshold: web3.utils.toWei(10, 'finney')
   }, {
-    rate: 5000,
+    rate: 4000, // 1:700
     lockupPeriod: 5000,
     threshold: web3.utils.toWei(50, 'ether')
   }, {
-    rate: 6000,
+    rate: 4500, // 1:725
     lockupPeriod: 10000,
     threshold: web3.utils.toWei(250, 'ether')
   }, {
-    rate: 7000,
+    rate: 5000, // 1:750
     lockupPeriod: 15000,
     threshold: web3.utils.toWei(1000, 'ether')
   }, {
-    rate: 8000,
+    rate: 6000, // 1:800
     lockupPeriod: 20000,
     threshold: web3.utils.toWei(2500, 'ether')
   }]
@@ -150,7 +150,7 @@ module.exports = function(deployer, network, accounts) {
   } else if(network == "main") {
     start = new Date("November 8, 2017 13:00:00 GMT+0000").getUnixTime()
     stakeholders = [{
-      account: '0x3cAf983aCCccc2551195e0809B7824DA6FDe4EC8', // Beneficiary 
+      account: '0xe431c50efb8035862b724c6f82cfd2b61432627b', // Beneficiary 
       tokens: 0,
       eth: 7500,
       overwriteReleaseDate: false,
